@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+    service:
+        env_file: .env
+        container_name: ${CONTAINER_NAME}
+        build:
+            context: .
+            dockerfile: config/docker/Dockerfile
+            args:
+                - GOLANG_VERSION=${GOLANG_VERSION}
+                - TZ=${TZ}
+        volumes:
+            - "./logs:/srv/golang-debugging-pages/logs"
+        ports:
+            -   mode: host
+                target: ${CONTAINER_PORT}
+                published: ${HOST_PORT}
+                protocol: tcp
+        restart: unless-stopped

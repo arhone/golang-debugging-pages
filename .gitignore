@@ -1,0 +1,6 @@
+.idea
+/config/main/config.json
+/logs/main.log
+.env
+./main
+test.go

@@ -1,0 +1,187 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+menu,
+ul,
+ol {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+menu,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body header {
+    width: 100%;
+    background-image: url("/assets/images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body header menu {
+    height: 40px;
+    background-color: #0000000d;
+}
+
+body header #logo-400 {
+    margin: 0 auto;
+}
+
+a img {
+    animation-name: logo;
+    animation-duration: 3s;
+    -webkit-filter: grayscale(0%);
+    -webkit-transition: .3s ease-in-out;
+    -moz-filter: grayscale(0%);
+    -moz-transition: .3s ease-in-out;
+    -o-filter: grayscale(0%);
+    -o-transition: .3s ease-in-out;
+}
+
+a img:hover {
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    -moz-filter: grayscale(100%);
+    -moz-transition: .3s ease-in-out;
+    -o-filter: grayscale(100%);
+    -o-transition: .3s ease-in-out;
+}
+
+@keyframes logo {
+    from {
+        -webkit-filter: grayscale(100%);
+        -webkit-transition: .3s ease-in-out;
+        -moz-filter: grayscale(100%);
+        -moz-transition: .3s ease-in-out;
+        -o-filter: grayscale(100%);
+        -o-transition: .3s ease-in-out;
+    }
+    to {
+        -webkit-filter: grayscale(0%);
+        -webkit-transition: .3s ease-in-out;
+        -moz-filter: grayscale(0%);
+        -moz-transition: .3s ease-in-out;
+        -o-filter: grayscale(0%);
+        -o-transition: .3s ease-in-out;
+    }
+}
+
+body header menu ul {
+    padding: 4px;
+}
+
+body section {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+body section h2 {
+    color: #444444;
+    text-align: center;
+}
+
+body section div {
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+body [data-time="client"] strong {
+    color: #027800;
+}
+
+body [data-time="server"] strong {
+    color: #780000;
+}
+
+body [data-time="server-json"] strong {
+    color: #120078;
+}
+
+body section span {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+body footer {
+    position: fixed;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    background-color: #f7f7f7;
+    overflow: hidden;
+}
+
+body footer a {
+    color: #444444;
+    display: block;
+    margin: 10px;
+}
