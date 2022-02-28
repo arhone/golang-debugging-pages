@@ -55,6 +55,7 @@ git clone git@golang-debugging-pages.github.com:ВАШ_ПРОЕКТ/golang-debug
 ## Настройка
 Копирование общего примера файла настроек в локальную версию файла
 ```
+cd golang-debugging-pages/
 cp .env.example .env
 ```
 
