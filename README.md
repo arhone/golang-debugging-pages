@@ -89,11 +89,11 @@ sudo docker logs --tail 50 --follow --timestamps golang-debugging-pages-01
 . deploy.sh username@example.com
 ```
 
-### Разрешить команду docker-compose без sudo
+### Разрешить команду sudo docker без подтверждения паролем
 ```
 sudo visudo
 ```
 Добавить запись
 ```
-username ALL=NOPASSWD: /usr/bin/docker-compose
+username ALL=NOPASSWD: /usr/bin/docker
 ```
